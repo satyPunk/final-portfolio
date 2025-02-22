@@ -2,7 +2,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import dynamic from "next/dynamic";
 import { useEffect, useState, useRef } from "react";
 
-const Lottie = dynamic(() => import("lottie-web"), { ssr: false });
+const Lottie = dynamic(() => import('lottie-web').then((mod) => mod.default), { ssr: false });
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
